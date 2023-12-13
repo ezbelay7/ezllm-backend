@@ -14,7 +14,7 @@ app.post('/api/chat', (req, res) => {
   const userMessage = req.body.message;
 
   // Spawn Python process
-  const pythonProcess = spawn('python', ['python-backend/text_generator.py', userMessage]);
+  const pythonProcess = spawn('python3', ['python-backend/text_generator.py', userMessage]);
 
   let pythonOutput = '';
 
